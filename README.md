@@ -1,4 +1,3 @@
-
 # HabitTracker
 
 A clean, minimal habit tracking app built with React Native + Expo.
