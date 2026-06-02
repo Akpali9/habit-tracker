@@ -4,29 +4,14 @@
     "slug": "habit-tracker",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
-    "splash": {
-      "backgroundColor": "#1a1a1a"
-    },
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.yourname.habittracker"
     },
     "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#1a1a1a"
-      },
       "package": "com.yourname.habittracker"
     },
-    "plugins": [
-      [
-        "expo-notifications",
-        {
-          "icon": "./assets/icon.png",
-          "color": "#1a1a1a"
-        }
-      ]
-    ]
+    "plugins": []
   }
 }

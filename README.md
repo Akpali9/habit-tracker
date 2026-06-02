@@ -1,92 +1,56 @@
-# HabitTracker
+# Welcome to your Expo app 👋
 
-A clean, minimal habit tracking app built with React Native + Expo.
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Features
-- ✅ Track daily habits with one tap
-- 🔥 Streak tracking (daily + per-habit)
-- 📊 Weekly bar chart & monthly completion rate
-- ➕ Add/edit habits with custom emoji + color
-- 💾 Persistent storage via AsyncStorage
-- 📳 Haptic feedback on interactions
+## Get started
 
-## Project Structure
+1. Install dependencies
 
-```
-HabitTracker/
-├── App.js                        # Root entry point
-├── app.json                      # Expo config
-├── src/
-│   ├── navigation/
-│   │   └── index.js              # Bottom tabs + modal stack
-│   ├── screens/
-│   │   ├── HomeScreen.js         # Today's habits
-│   │   ├── StatsScreen.js        # Progress & analytics
-│   │   └── AddHabitScreen.js     # Create/edit habit
-│   ├── storage/
-│   │   └── index.js              # AsyncStorage helpers
-│   └── theme/
-│       └── index.js              # Colors, spacing, typography
-```
+   ```bash
+   npm install
+   ```
 
-## Quick Start
+2. Start the app
 
-### Prerequisites
-- Node.js 18+
-- Expo CLI: `npm install -g expo-cli`
-- Expo Go app on your phone (iOS/Android)
+   ```bash
+   npx expo start
+   ```
 
-### Install & Run
+In the output, you'll find options to open the app in a
+
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+
+## Get a fresh project
+
+When you're ready, run:
 
 ```bash
-cd HabitTracker
-npm install
-npx expo start
+npm run reset-project
 ```
 
-Then scan the QR code with Expo Go on your phone.
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-### Run on Simulator
+### Other setup steps
 
-```bash
-# iOS (Mac only)
-npx expo start --ios
+- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
+- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
+- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
 
-# Android
-npx expo start --android
-```
+## Learn more
 
-## Next Steps
+To learn more about developing your project with Expo, look at the following resources:
 
-### Notifications
-Reminders are wired up via `expo-notifications`. Add scheduling in `src/storage/index.js`:
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-```js
-import * as Notifications from 'expo-notifications';
+## Join the community
 
-export async function scheduleReminder(habitId, hour, minute) {
-  await Notifications.scheduleNotificationAsync({
-    content: { title: "Habit reminder", body: "Time to check in!" },
-    trigger: { hour, minute, repeats: true },
-  });
-}
-```
+Join our community of developers creating universal apps.
 
-### Build for Production
-
-```bash
-# Install EAS CLI
-npm install -g eas-cli
-
-# Configure
-eas build:configure
-
-# Build
-eas build --platform ios
-eas build --platform android
-```
-
-### Adding More Screens
-- **History screen** — calendar heatmap view (consider `react-native-calendars`)
-- **Settings screen** — notification times, theme toggle, data export
-- **Habit detail** — long-press a habit to see its full history
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
